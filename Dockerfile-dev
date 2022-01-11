@@ -1,0 +1,12 @@
+FROM tiangolo/uwsgi-nginx-flask:python3.9
+
+RUN apt-get update -y && \
+    apt-get upgrade -y
+    
+RUN rm -rf /app/*
+
+COPY ./requirements.txt /app/requirements.txt
+RUN pip install -r /app/requirements.txt
+
+RUN rm /etc/uwsgi/uwsgi.ini
+COPY uwsgi.dev.ini /etc/uwsgi/uwsgi.ini

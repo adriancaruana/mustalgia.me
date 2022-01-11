@@ -1,0 +1,107 @@
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYGR388W5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CTYGR388W5');
+    </script>
+    <title>mustalgia.me</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="../static/favicon.ico"/>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <h1 class="text-center mt-5"><span class="mustalgiame"><a href="/">mustalgia.me</a></span></h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-8 p-3 m-3 border border-primary rounded">
+            <p>
+                <b>Nostalgia</b>, n:
+            </p>
+            <p>
+                 A sentimental longing or wistful affection for a period in the past.
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col">
+            <h2 class="mt-2">Relive your past music obsessions</h2>
+
+            <p>
+                Last.fm is great for recording the music you listen to and showcasing the music you're currently enjoying. Unfortunately, Last.fm does not make it easy to explore your historical listening patterns. This makes it difficult to recall and revisit the music you enjoyed in the past. At worst, this could mean that you forget about music that hasn't found its way into your long-term memory.
+            </p>
+            <p>
+                That is where <span class="mustalgiame"><a href="/">mustalgia.me</a></span> comes in! Much like the photo app on your smartphone reminds you of past memories, <span class="mustalgiame"><a href="/">mustalgia.me</a></span> analyses your listening history to trigger your nostalgia. This is done by porviding various <em>insights</em> into your past and present listening habits, and hopefully reminding you of some artists and albums that you may want consider revisiting. 
+            </p>
+
+            <h2 class="mt-2">More than just 'Top Albums'</h2>
+            <p>
+                <span class="mustalgiame"><a href="/">mustalgia.me</a></span> goes far beyond Last.fm to present interesting insights into your listening habits. These insights are described below.
+            </p>
+
+            <ul>
+            {% for t in timely_helpers %}
+                <!-- <li><b>{{ t[0] }}</b>: {{ t[1]|safe }}</li> -->
+                <li>{{ t[1]|safe }}</li>
+            {% endfor %}
+            {% for h in historical_helpers %}
+                <!-- <li><b>{{ h[0] }}</b>: {{ h[1]|safe }}</li> -->
+                <li>{{ h[1]|safe }}</li>
+            {% endfor %}       
+            </ul>
+
+            <h2 class="mt-2">Show me an example!</h2>
+            <p>
+                Feel free to take a look at my (the creator of <span class="mustalgiame"><a href="/">mustalgia.me</a></span>) listening insights <a href="./user/adjrian">here</a>.
+            </p>
+
+            <h2 class="mt-2">Getting Started</h2>
+            <p>If this is the first time you've used mustalgia.me (or your first time in a while), then this may take take a while (approximately 15 minutes per 100k scrobbles). We must be nice to the Last.fm API, and to my humble self-hosted server.</p>
+            <p>To start using <span class="mustalgiame"><a href="/">mustalgia.me</a></span>, simply enter your Last.fm username below:</p>
+            <form method="POST" id="submit">
+                <div class="form-group">
+                  <input class="form-control" name="username-input" aria-describedby="emailHelp" placeholder="Last-fm username (case sensitive)">
+                  <br>
+                  <button type="submit" class="btn btn-primary" onClick="showDiv()">Submit</button>
+                </div>
+            </form>
+            <div class="clearfix" id="loading" style="display: none">
+                <div class="spinner-border text-primary" role="status"></div>
+                <div>
+                    <p>Sit tight -- your nostalgic insights are on their way! This page will automatically redirect you once your recommendations are ready. </p>
+                </div>
+            </div>
+            <script>
+                function showDiv() {
+                    document.getElementById('submit').style.display = "none";
+                    document.getElementById('loading').style.display = "block";
+                }
+            </script>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center footer"">
+        <div class="col-8 p-3 m-3 justify-content-center">
+            <p style="text-align: center">
+                👋 Hi! <span class="mustalgiame"><a href="/">mustalgia.me</a></span> was created by me, <a href="https://adriancaruana.com">Adrian Caruana</a>.
+                The source code can be found on <a href="https://github.com/adriancaruana/mustalgia.me">GitHub</a>.
+                If you like this project or if you find if useful, feel free to <a href="https://ko-fi.com/adriancaruana">show your support by buying me a coffee</a>. I also accept thanks via <a href="mailto:adrian@adriancaruana.com">email</a> . 
+            </p>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,99 @@
+/* Headings: CooperHewitt */
+
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-Heavy.woff") format("woff");
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-HeavyItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-SemiboldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-Medium.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-MediumItalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-Book.woff") format("woff");
+    font-weight: 350;
+    font-display: swap;
+}
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-BookItalic.woff") format("woff");
+    font-weight: 350;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-Light.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-Thin.woff") format("woff");
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: CooperHewitt;
+    src: url("./fonts/CooperHewitt-ThinItalic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
